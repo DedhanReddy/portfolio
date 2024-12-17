@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>Dedhan Reddy Portfolio</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            background-color: #04aa6d;
+            padding: 10px 20px;
+            justify-content: space-between;
+        }
+
+        nav h3 {
+            font-size: 24px;
+            color: yellowgreen;
+            margin: 0;
+        }
+
+        .links {
+            display: flex;
+        }
+
+        .links a {
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #ffffff;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .links a:hover {
+            color: yellowgreen;
+            transform: scale(1.1);
+        }
+
+        .hero {
+            background-color: #333;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            margin: 20px 0;
+            transition: transform 0.5s ease;
+        }
+
+        .hero img:hover {
+            transform: scale(1.1) rotate(10deg);
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            animation: fadeIn 3s;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: burlywood;
+            max-width: 600px;
+            margin: 0 auto;
+            animation: fadeIn 5s ease-in-out;
+        }
+
+        /* About Section */
+        .about {
+            background-color: khaki;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .about h2 {
+            letter-spacing: 2px;
+            line-height: 1.5;
+            padding-top: 10px;
+        }
+
+        .about p {
+            padding: 12px;
+            font-size: 15px;
+            letter-spacing: 1px;
+            line-height: 20px;
+            color: black;
+        }
+
+        /* Education Section */
+        .education {
+            background-color: #eee;
+            color: #333;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            outline: none;
+            font-size: 20px;
+            transition: 0.4s;
+            cursor: pointer;
+        }
+
+        .active, .education:hover {
+            background-color: #ccc;
+        }
+
+        .education-content {
+            padding: 0 18px;
+            display: none;
+            background-color: brown;
+            color: white;
+            text-align: center;
+        }
+
+        /* Keyframes */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Skills Section */
+.skills {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.category {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.category h3 {
+    font-size: 1.6rem;
+    color: #04aa6d;
+    margin-bottom: 10px;
+}
+
+.category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.category ul li {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+.category ul li:hover {
+    color: #04aa6d;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .category {
+        padding: 15px;
+    }
+
+    .category h3 {
+        font-size: 1.4rem;
+    }
+
+    .category ul li {
+        font-size: 1rem;
+    }
+}
+/* Projects Section */
+.projects {
+    padding: 40px 20px;
+    background-color: #2c3e50; /* Dark background color */
+    text-align: center;
+    color: white; /* White text for contrast */
+}
+
+.projects h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ecf0f1; /* Lighter color for the heading */
+}
+
+.project {
+    background-color: #34495e; /* Slightly lighter dark background */
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: left;
+}
+
+.project h3 {
+    font-size: 1.6rem;
+    color: #1abc9c; /* Accent color for the project title */
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1.2rem;
+    color: #ecf0f1; /* Light color for the project description */
+    margin-bottom: 20px;
+}
+
+.project-link {
+    font-size: 1.2rem;
+    color: #1abc9c;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #1abc9c;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #1abc9c;
+    color: #fff;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .projects h2 {
+        font-size: 1.6rem;
+    }
+
+    .project h3 {
+        font-size: 1.4rem;
+    }
+
+    .project p {
+        font-size: 1rem;
+    }
+}
+</style>
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav>
+        <h3><strong style="color: #333">Dedhan</strong>Reddy</h3>
+        <div class="links">
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#Skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <img src="ded.jpg" alt="Dedhan Reddy">
+        <h2>Hi, I am Pathakunta Dedhan Reddy</h2>
+        <p>
+            As a passionate Front-End Developer, MERN Full Stack Developer, Video Creator, and Mentor, I am enthusiastic about collaborating on exciting projects, mentoring aspiring developers, and creating innovative solutions. Let's create something impactful together!
+        </p>
+    </div>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a passionate web developer and video editor skilled in HTML, CSS, JavaScript, Node.js, MongoDB, and video editing tools like DaVinci Resolve and After Effects. I enjoy combining creativity and technology to create impactful solutions.
+        </p>
+        <button class="education">Education Details</button>
+        <div class="education-content">
+            <p>
+                BTech, Computer Science and Engineering (CSE) - Specialization in Artificial Intelligence and Data Science (AIDS), 3rd Year,<br>
+                Dhanalakshmi Srinivasan University, Tamil Nadu
+            </p>
+        </div>
+    </section>
+    <!-- Skills Section -->
+<section class="skills" id="Skills">
+    <h2>My Skills</h2>
+
+    <!-- Front-End Skills -->
+    <div class="category">
+        <h3>Front-End</h3>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>ReactJS</li>
+        </ul>
+    </div>
+
+    <!-- Back-End Skills -->
+    <div class="category">
+        <h3>Back-End</h3>
+        <ul>
+            <li>Node.js</li>
+            <li>MongoDB</li>
+            <li>Express.js</li>
+        </ul>
+    </div>
+
+    <!-- Video Editing Skills -->
+    <div class="category">
+        <h3>Video Editing</h3>
+        <ul>
+            <li>DaVinci Resolve</li>
+        </ul>
+    </div>
+</section>
+<!-- Projects Section -->
+<section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project">
+        <h3>E-Commerce Website</h3>
+        <p>
+            I have developed a fully functional e-commerce website where users can browse, add to cart, and checkout securely.
+            It includes features like product filtering, user authentication, and payment gateway integration.
+        </p>
+        <a href="https://shopnewbuddy.netlify.app/" target="_blank" class="project-link">Visit Project</a>
+    </div>
+</section>
+<section id="contact" class="contact">
+    <h2>Contact</h2>
+    <i class="fa-brands fa-linkedin">Join Us</i>
+    <i class="fa-brands fa-github">Github</i>
+</section>
+<script>
+        // Education Section Toggle
+        var acc = document.getElementsByClassName("education");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
